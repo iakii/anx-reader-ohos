@@ -595,12 +595,19 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.0.0"
+  flex_color_picker:
+    dependency: "direct overridden"
+    description:
+      path: "third_library/flex_color_picker"
+      relative: true
+    source: path
+    version: "3.7.1"
   flex_color_scheme:
     dependency: "direct main"
     description:
       path: "third_library/flex_color_scheme"
       ref: develop
-      resolved-ref: "866b90f68d6a6880c4faac94d6a7017c5efa6730"
+      resolved-ref: e6bdde0cf503910fef08890e7e9613eaa446d861
       url: "https://github.com/iakii/anx-reader-ohos"
     source: git
     version: "8.0.0"
@@ -1198,7 +1205,7 @@ packages:
     description:
       path: "third_library/mongol"
       ref: develop
-      resolved-ref: "866b90f68d6a6880c4faac94d6a7017c5efa6730"
+      resolved-ref: e6bdde0cf503910fef08890e7e9613eaa446d861
       url: "https://github.com/iakii/anx-reader-ohos"
     source: git
     version: "9.0.0"

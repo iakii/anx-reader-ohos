@@ -111,14 +111,14 @@ dependencies:
       path: third_library/mongol
   introduction_screen: ^3.1.17
 
-
 dependency_overrides:
   url_launcher:
     git:
       url: "https://gitcode.com/openharmony-tpc/flutter_packages.git"
       # ref: br_url_launcher-v6.3.0_ohos
       path: "packages/url_launcher/url_launcher"
-
+  flex_color_picker:
+    path: ./third_library/flex_color_picker
   flutter_inappwebview:
     git:
       url: "https://gitcode.com/openharmony-sig/flutter_inappwebview.git"
