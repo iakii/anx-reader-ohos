@@ -14,9 +14,13 @@
   },
   "overrides": {
     "@ohos/flutter_ohos": "file:./har/flutter.har",
-    "flutter_inappwebview_ohos": "../../../../../AppData/Local/Pub/Cache/git/flutter_inappwebview-bfc8e52cc9ba6e4f361bad95f7a6ee92a56ec6f6/flutter_inappwebview_ohos/ohos",
+    "flutter_inappwebview_ohos": "../../../../../AppData/Local/Pub/Cache/git/flutter_inappwebview-fa79c7c7bcf397078e073cef518a2cf0b55a33a6/flutter_inappwebview_ohos/ohos",
     "device_info_plus": "../../../../../AppData/Local/Pub/Cache/git/flutter_plus_plugins-9b122f3a785ec9f99af07c51b6a8ddb66a3649a1/packages/device_info_plus/device_info_plus/ohos",
     "saver_gallery": "../../../../../AppData/Local/Pub/Cache/hosted/pub.flutter-io.cn/saver_gallery-4.0.1/ohos",
-    "@ohos/flutter_module": "file:./entry"
+    "@ohos/flutter_module": "file:./entry",
+    "path_provider_ohos": "../../../../../AppData/Local/Pub/Cache/git/flutter_packages-fd78c67350d1443409322719a0b33b29cc44f972/packages/path_provider/path_provider_ohos/ohos",
+    "shared_preferences_ohos": "../../../../../AppData/Local/Pub/Cache/git/flutter_packages-fd78c67350d1443409322719a0b33b29cc44f972/packages/shared_preferences/shared_preferences_ohos/ohos",
+    "url_launcher_ohos": "../../../../../AppData/Local/Pub/Cache/git/flutter_packages-fd78c67350d1443409322719a0b33b29cc44f972/packages/url_launcher/url_launcher_ohos/ohos",
+    "share_plus": "../../../../../AppData/Local/Pub/Cache/git/flutter_plus_plugins-cd7e39d8c22f44f5619e5526d2f3cf05e1a35ef9/packages/share_plus/share_plus/ohos"
   }
 }

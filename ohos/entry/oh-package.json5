@@ -8,6 +8,10 @@
   "dependencies": {
     "saver_gallery": "file:../har/saver_gallery.har",
     "flutter_inappwebview_ohos": "file:../har/flutter_inappwebview_ohos.har",
-    "device_info_plus": "file:../har/device_info_plus.har"
+    "device_info_plus": "file:../har/device_info_plus.har",
+    "path_provider_ohos": "file:../har/path_provider_ohos.har",
+    "shared_preferences_ohos": "file:../har/shared_preferences_ohos.har",
+    "url_launcher_ohos": "file:../har/url_launcher_ohos.har",
+    "share_plus": "file:../har/share_plus.har"
   }
 }
