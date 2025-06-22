@@ -30,7 +30,6 @@ class AiCache {
     String data,
     String identifier,
   ) async {
-
     final cacheDir = await getAnxCacheDir();
     final file = File('${cacheDir.path}/$cacheFileName');
     final cache = await readCache();
@@ -52,6 +51,7 @@ class AiCache {
     if (entry != null) {
       String data = entry['data'] as String;
       String identifier = entry['identifier'] as String;
+      // ignore: use_build_context_synchronously
       return '$data\n\n> ${L10n.of(context).ai_cached_by(identifier)}';
     }
     return null;
@@ -61,7 +61,6 @@ class AiCache {
     final maxCount = Prefs().maxAiCacheCount;
     var cache = await readCache();
     if (cache.length > maxCount) {
-
       final keys = cache.keys.toList();
       keys.sort((a, b) => cache[a]['timestamp'] - cache[b]['timestamp']);
       final keysToRemove = keys.sublist(0, cache.length - maxCount);

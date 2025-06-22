@@ -1,0 +1,22 @@
+{
+  "modelVersion": "5.0.0",
+  "name": "anx_reader",
+  "version": "1.0.0",
+  "description": "Please describe the basic information.",
+  "main": "",
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "@ohos/flutter_ohos": "file:./har/flutter.har"
+  },
+  "devDependencies": {
+    "@ohos/hypium": "1.0.6"
+  },
+  "overrides": {
+    "@ohos/flutter_ohos": "file:./har/flutter.har",
+    "flutter_inappwebview_ohos": "../../../../../AppData/Local/Pub/Cache/git/flutter_inappwebview-bfc8e52cc9ba6e4f361bad95f7a6ee92a56ec6f6/flutter_inappwebview_ohos/ohos",
+    "device_info_plus": "../../../../../AppData/Local/Pub/Cache/git/flutter_plus_plugins-9b122f3a785ec9f99af07c51b6a8ddb66a3649a1/packages/device_info_plus/device_info_plus/ohos",
+    "saver_gallery": "../../../../../AppData/Local/Pub/Cache/hosted/pub.flutter-io.cn/saver_gallery-4.0.1/ohos",
+    "@ohos/flutter_module": "file:./entry"
+  }
+}

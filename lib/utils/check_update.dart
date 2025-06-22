@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:anx_reader/config/shared_preference_provider.dart';
 import 'package:anx_reader/l10n/generated/L10n.dart';
 import 'package:anx_reader/main.dart';
@@ -26,8 +28,7 @@ Future<void> checkUpdate(bool manualCheck) async {
   BuildContext context = navigatorKey.currentContext!;
   Response response;
   try {
-    response = await Dio()
-        .get('https://api.anx.anxcye.com/api/info/latest');
+    response = await Dio().get('https://api.anx.anxcye.com/api/info/latest');
   } catch (e) {
     if (manualCheck) {
       AnxToast.show(L10n.of(context).common_failed);
@@ -35,13 +36,13 @@ Future<void> checkUpdate(bool manualCheck) async {
     throw Exception('Update: Failed to check for updates $e');
   }
   String newVersion = response.data['version'].toString().substring(1);
-  String currentVersion =
-      (await getAppVersion()).split('+').first;
+  String currentVersion = (await getAppVersion()).split('+').first;
   AnxLog.info('Update: new version $newVersion');
 
   List<String> newVersionList = newVersion.split('.');
   List<String> currentVersionList = currentVersion.split('.');
-  AnxLog.info('Current version: $currentVersionList, New version: $newVersionList');
+  AnxLog.info(
+      'Current version: $currentVersionList, New version: $newVersionList');
   bool needUpdate = false;
   for (int i = 0; i < newVersionList.length; i++) {
     int newVer = int.parse(newVersionList[i]);
@@ -70,7 +71,8 @@ Future<void> checkUpdate(bool manualCheck) async {
               )),
           content: SingleChildScrollView(
             child: MarkdownBody(
-                data: '''### ${L10n.of(context).update_new_version} $newVersion\n
+                data:
+                    '''### ${L10n.of(context).update_new_version} $newVersion\n
 ${L10n.of(context).update_current_version} $currentVersion\n
 $body'''),
           ),
@@ -78,7 +80,7 @@ $body'''),
             TextButton(
               onPressed: () {
                 SmartDialog.dismiss();
-              },  
+              },
               child: Text(L10n.of(context).common_cancel),
             ),
             TextButton(
@@ -92,9 +94,7 @@ $body'''),
             ),
             TextButton(
               onPressed: () {
-                launchUrl(
-                    Uri.parse(
-                        'https://anx.anxcye.com/download'),
+                launchUrl(Uri.parse('https://anx.anxcye.com/download'),
                     mode: LaunchMode.externalApplication);
               },
               child: Text(L10n.of(context).update_via_official_website),

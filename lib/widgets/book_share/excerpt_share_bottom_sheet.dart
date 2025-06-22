@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'dart:io';
 import 'dart:ui' as ui;
 
@@ -66,14 +68,14 @@ class _ExcerptShareBottomSheetState
     Prefs().excerptShareBgimgIndex = index;
   }
 
+  Color get _textColor =>
+      _colorSchemes[Prefs().excerptShareColorIndex]['text']!;
 
+  Color get _backgroundColor =>
+      _colorSchemes[Prefs().excerptShareColorIndex]['background']!;
 
-
-  Color get _textColor => _colorSchemes[Prefs().excerptShareColorIndex]['text']!;
-
-  Color get _backgroundColor => _colorSchemes[Prefs().excerptShareColorIndex]['background']!;
-
-  String? get _backgroundImage => _backgroundImages[Prefs().excerptShareBgimgIndex];
+  String? get _backgroundImage =>
+      _backgroundImages[Prefs().excerptShareBgimgIndex];
 
   // final List<String> _fonts = ['default', 'serif', 'sans-serif', 'monospace'];
 
@@ -218,9 +220,7 @@ class _ExcerptShareBottomSheetState
                         },
                       ),
                     ),
-
                     const SizedBox(height: 16),
-
                     Text(
                       L10n.of(context).reading_page_share_font,
                       style: _getTitleStyle(context),
@@ -257,9 +257,7 @@ class _ExcerptShareBottomSheetState
                             ),
                           ),
                     ),
-
                     const SizedBox(height: 16),
-
                     Text(
                       L10n.of(context).reading_page_share_color,
                       style: _getTitleStyle(context),
@@ -313,9 +311,7 @@ class _ExcerptShareBottomSheetState
                         },
                       ),
                     ),
-
                     const SizedBox(height: 16),
-
                     Text(
                       L10n.of(context).reading_page_share_background,
                       style: _getTitleStyle(context),

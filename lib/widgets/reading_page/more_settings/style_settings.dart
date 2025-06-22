@@ -25,7 +25,7 @@ class _StyleSettingsState extends State<StyleSettings> {
         ),
         Expanded(
           child: Slider(
-            padding: EdgeInsets.symmetric(horizontal: 8),
+            // padding: EdgeInsets.symmetric(horizontal: 8),
             value: bookStyle.indent,
             onChanged: (double value) {
               setState(() {
@@ -56,7 +56,7 @@ class _StyleSettingsState extends State<StyleSettings> {
               ),
         Expanded(
           child: Slider(
-            padding: EdgeInsets.symmetric(horizontal: 8),
+            // padding: EdgeInsets.symmetric(horizontal: 8),
             value: bookStyle.sideMargin,
             onChanged: (double value) {
               setState(() {
@@ -82,7 +82,7 @@ class _StyleSettingsState extends State<StyleSettings> {
         ),
         Expanded(
           child: Slider(
-            padding: EdgeInsets.symmetric(horizontal: 8),
+            // padding: EdgeInsets.symmetric(horizontal: 8),
             value: bookStyle.letterSpacing,
             onChanged: (double value) {
               setState(() {
@@ -113,7 +113,7 @@ class _StyleSettingsState extends State<StyleSettings> {
               ),
         Expanded(
           child: Slider(
-            padding: EdgeInsets.symmetric(horizontal: 8),
+            // padding: EdgeInsets.symmetric(horizontal: 8),
             value: bookStyle.topMargin,
             onChanged: (double value) {
               setState(() {
@@ -139,7 +139,7 @@ class _StyleSettingsState extends State<StyleSettings> {
               ),
         Expanded(
           child: Slider(
-            padding: EdgeInsets.symmetric(horizontal: 8),
+            // padding: EdgeInsets.symmetric(horizontal: 8),
             value: bookStyle.bottomMargin,
             onChanged: (double value) {
               setState(() {
@@ -165,7 +165,7 @@ class _StyleSettingsState extends State<StyleSettings> {
         ),
         Expanded(
           child: Slider(
-            padding: EdgeInsets.symmetric(horizontal: 8),
+            // padding: EdgeInsets.symmetric(horizontal: 8),
             value: bookStyle.fontWeight,
             onChanged: (double value) {
               setState(() {

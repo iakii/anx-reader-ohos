@@ -116,6 +116,7 @@ class _BookNotesPageState extends State<BookNotesPage> {
     notes ??= await selectBookNotesByBookId(book.id);
 
     showModalBottomSheet(
+        // ignore: use_build_context_synchronously
         context: context,
         builder: (context) {
           return SizedBox(
@@ -135,23 +136,23 @@ class _BookNotesPageState extends State<BookNotesPage> {
                     icon: const Icon(IonIcons.logo_markdown),
                     text: 'Markdown',
                     onTap: () {
-                  Navigator.pop(context);
-                  exportNotes(book, notes!, ExportType.md);
-                }),
+                      Navigator.pop(context);
+                      exportNotes(book, notes!, ExportType.md);
+                    }),
                 IconAndText(
                     icon: const Icon(Icons.text_snippet),
                     text: 'Text',
                     onTap: () {
-                  Navigator.pop(context);
-                  exportNotes(book, notes!, ExportType.txt);
-                }),
+                      Navigator.pop(context);
+                      exportNotes(book, notes!, ExportType.txt);
+                    }),
                 IconAndText(
                     icon: const Icon(Icons.table_chart),
                     text: 'CSV',
                     onTap: () {
-                  Navigator.pop(context);
-                  exportNotes(book, notes!, ExportType.csv);
-                }),
+                      Navigator.pop(context);
+                      exportNotes(book, notes!, ExportType.csv);
+                    }),
               ],
             ),
           );
@@ -164,19 +165,19 @@ class _BookNotesPageState extends State<BookNotesPage> {
           icon: const Icon(Icons.details),
           text: L10n.of(context).notes_page_detail,
           onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => BookDetail(book: book),
-          ),
-        );
-      }),
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => BookDetail(book: book),
+              ),
+            );
+          }),
       IconAndText(
           icon: const Icon(Icons.ios_share),
           text: L10n.of(context).notes_page_export,
           onTap: () {
-        handleExportNotes(context, book);
-      }),
+            handleExportNotes(context, book);
+          }),
     ]);
   }
 

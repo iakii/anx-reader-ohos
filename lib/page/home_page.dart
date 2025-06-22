@@ -1,30 +1,26 @@
 import 'dart:io';
 
+import 'package:anx_reader/config/shared_preference_provider.dart';
 import 'package:anx_reader/dao/database.dart';
 import 'package:anx_reader/enums/sync_direction.dart';
 import 'package:anx_reader/l10n/generated/L10n.dart';
-import 'package:anx_reader/service/initialization_check.dart';
 import 'package:anx_reader/page/home_page/bookshelf_page.dart';
 import 'package:anx_reader/page/home_page/notes_page.dart';
 import 'package:anx_reader/page/home_page/settings_page.dart';
 import 'package:anx_reader/page/home_page/statistics_page.dart';
+import 'package:anx_reader/providers/sync.dart';
+import 'package:anx_reader/service/initialization_check.dart';
 import 'package:anx_reader/service/receive_file/receive_share.dart';
 import 'package:anx_reader/utils/check_update.dart';
-import 'package:anx_reader/utils/get_path/get_temp_dir.dart';
 import 'package:anx_reader/utils/load_default_font.dart';
-import 'package:anx_reader/utils/log/common.dart';
-import 'package:anx_reader/providers/sync.dart';
-import 'package:anx_reader/config/shared_preference_provider.dart';
 import 'package:anx_reader/utils/toast/common.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_smart_dialog/flutter_smart_dialog.dart';
 import 'package:icons_plus/icons_plus.dart';
-import 'package:url_launcher/url_launcher.dart';
 
-WebViewEnvironment? webViewEnvironment;
+// WebViewEnvironment? webViewEnvironment;
 
 class HomePage extends ConsumerStatefulWidget {
   const HomePage({super.key});
@@ -45,33 +41,33 @@ class _HomePageState extends ConsumerState<HomePage> {
   }
 
   Future<void> _checkWindowsWebview() async {
-    final availableVersion = await WebViewEnvironment.getAvailableVersion();
-    AnxLog.info('WebView2 version: $availableVersion');
+    // final availableVersion = await WebViewEnvironment.getAvailableVersion();
+    // AnxLog.info('WebView2 version: $availableVersion');
 
-    if (availableVersion == null) {
-      SmartDialog.show(
-        builder: (context) => AlertDialog(
-          title: const Icon(Icons.error),
-          content: Text(L10n.of(context).webview2_not_installed),
-          actions: [
-            TextButton(
-              onPressed: () => {
-                launchUrl(
-                    Uri.parse(
-                        'https://developer.microsoft.com/en-us/microsoft-edge/webview2'),
-                    mode: LaunchMode.externalApplication)
-              },
-              child: Text(L10n.of(context).webview2_install),
-            ),
-          ],
-        ),
-      );
-    } else {
-      webViewEnvironment = await WebViewEnvironment.create(
-        settings: WebViewEnvironmentSettings(
-            userDataFolder: (await getAnxTempDir()).path),
-      );
-    }
+    // if (availableVersion == null) {
+    //   SmartDialog.show(
+    //     builder: (context) => AlertDialog(
+    //       title: const Icon(Icons.error),
+    //       content: Text(L10n.of(context).webview2_not_installed),
+    //       actions: [
+    //         TextButton(
+    //           onPressed: () => {
+    //             launchUrl(
+    //                 Uri.parse(
+    //                     'https://developer.microsoft.com/en-us/microsoft-edge/webview2'),
+    //                 mode: LaunchMode.externalApplication)
+    //           },
+    //           child: Text(L10n.of(context).webview2_install),
+    //         ),
+    //       ],
+    //     ),
+    //   );
+    // } else {
+    //   webViewEnvironment = await WebViewEnvironment.create(
+    //     settings: WebViewEnvironmentSettings(
+    //         userDataFolder: (await getAnxTempDir()).path),
+    //   );
+    // }
   }
 
   void _showDbUpdatedDialog() {

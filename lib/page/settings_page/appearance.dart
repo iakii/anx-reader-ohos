@@ -203,6 +203,7 @@ Future<void> showColorPickerDialog(BuildContext context) async {
           TextButton(
             child: Text(L10n.of(context).common_ok),
             onPressed: () {
+              // ignore: deprecated_member_use
               prefsProvider.saveThemeToPrefs(pickedColor.value);
               Navigator.of(context).pop();
             },

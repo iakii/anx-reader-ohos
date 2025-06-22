@@ -245,9 +245,9 @@ class _MyAppState extends ConsumerState<MyApp>
                           swapLegacyOnMaterial3: true,
                           colorScheme: colorScheme)
                       .copyWith(
-                          sliderTheme: const SliderThemeData(year2023: false),
+                          sliderTheme: const SliderThemeData(),
                           progressIndicatorTheme:
-                              const ProgressIndicatorThemeData(year2023: false))
+                              const ProgressIndicatorThemeData())
                       .useSystemChineseFont(Brightness.light),
                   darkTheme: FlexThemeData.dark(
                           useMaterial3: true,
@@ -255,9 +255,9 @@ class _MyAppState extends ConsumerState<MyApp>
                           darkIsTrueBlack: prefsNotifier.trueDarkMode,
                           colorScheme: colorScheme)
                       .copyWith(
-                          sliderTheme: const SliderThemeData(year2023: false),
+                          sliderTheme: const SliderThemeData(),
                           progressIndicatorTheme:
-                              const ProgressIndicatorThemeData(year2023: false))
+                              const ProgressIndicatorThemeData())
                       .useSystemChineseFont(Brightness.dark),
                   home: const HomePage(),
                 ),

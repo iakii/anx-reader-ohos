@@ -15,6 +15,7 @@ Future<String> getDownloadPath() async {
       return '/storage/emulated/0/Download';
     case TargetPlatform.iOS:
       return (await path.getApplicationDocumentsDirectory()).path;
+    case TargetPlatform.ohos:
     case TargetPlatform.linux:
     case TargetPlatform.macOS:
     case TargetPlatform.windows:

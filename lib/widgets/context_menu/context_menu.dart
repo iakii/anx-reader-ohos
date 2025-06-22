@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:anx_reader/config/shared_preference_provider.dart';
 import 'package:anx_reader/page/reading_page.dart';
 import 'package:anx_reader/widgets/context_menu/excerpt_menu.dart';
@@ -34,14 +36,16 @@ void showContextMenu(
   }
 
   BoxDecoration decoration = BoxDecoration(
-    color: Prefs().eInkMode? Colors.white : Theme.of(context).colorScheme.secondaryContainer,
+    color: Prefs().eInkMode
+        ? Colors.white
+        : Theme.of(context).colorScheme.secondaryContainer,
     borderRadius: BorderRadius.circular(10),
     boxShadow: [
       if (!Prefs().eInkMode)
-      BoxShadow(
-        color: Colors.black.withOpacity(0.1),
-        spreadRadius: 5,
-        blurRadius: 7,
+        BoxShadow(
+          color: Colors.black.withOpacity(0.1),
+          spreadRadius: 5,
+          blurRadius: 7,
           offset: const Offset(0, 3),
         ),
       if (Prefs().eInkMode)

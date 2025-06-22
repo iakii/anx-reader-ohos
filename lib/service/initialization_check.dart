@@ -1,12 +1,7 @@
 import 'package:anx_reader/config/shared_preference_provider.dart';
 import 'package:anx_reader/enums/version_check_type.dart';
-import 'package:anx_reader/main.dart';
 import 'package:anx_reader/utils/app_version.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:anx_reader/page/onboarding_screen.dart';
-import 'package:anx_reader/page/changelog_screen.dart';
 import 'package:anx_reader/utils/log/common.dart';
-import 'package:flutter/material.dart';
 
 class InitializationCheck {
   static String? _lastVersion;
@@ -39,7 +34,7 @@ class InitializationCheck {
 
   static Future<VersionCheckType> _checkVersion() async {
     _lastVersion = Prefs().lastAppVersion;
-      _currentVersion = await getAppVersion();
+    _currentVersion = await getAppVersion();
     if (_lastVersion == null) {
       return VersionCheckType.firstLaunch;
     } else {
@@ -55,18 +50,18 @@ class InitializationCheck {
     AnxLog.info('First launch detected, showing onboarding');
     // wait 0.8 seconds to ensure the app is ready
     Future.delayed(const Duration(milliseconds: 800), () {
-      showCupertinoSheet(
-        context: navigatorKey.currentContext!,
-        pageBuilder: (context) => Scaffold(
+      // showCupertinoSheet(
+      //   context: navigatorKey.currentContext!,
+      //   pageBuilder: (context) => Scaffold(
 
-          body: OnboardingScreen(
-            onComplete: () async {
-              Prefs().lastAppVersion = await currentVersion;
-              Navigator.pop(navigatorKey.currentContext!);
-            },
-          ),
-        ),
-      );
+      //     body: OnboardingScreen(
+      //       onComplete: () async {
+      //         Prefs().lastAppVersion = await currentVersion;
+      //         Navigator.pop(navigatorKey.currentContext!);
+      //       },
+      //     ),
+      //   ),
+      // );
     });
   }
 
@@ -75,17 +70,17 @@ class InitializationCheck {
     final cv = await currentVersion;
     AnxLog.info('Version update detected: $lv -> $cv');
     Future.delayed(const Duration(milliseconds: 800), () {
-      showCupertinoSheet(
-        context: navigatorKey.currentContext!,
-        pageBuilder: (context) => ChangelogScreen(
-          lastVersion: lv,
-          currentVersion: cv,
-          onComplete: () {
-            Prefs().lastAppVersion = cv;
-            Navigator.pop(navigatorKey.currentContext!);
-          },
-        ),
-      );
+      // showCupertinoSheet(
+      //   context: navigatorKey.currentContext!,
+      //   pageBuilder: (context) => ChangelogScreen(
+      //     lastVersion: lv,
+      //     currentVersion: cv,
+      //     onComplete: () {
+      //       Prefs().lastAppVersion = cv;
+      //       Navigator.pop(navigatorKey.currentContext!);
+      //     },
+      //   ),
+      // );
     });
   }
 

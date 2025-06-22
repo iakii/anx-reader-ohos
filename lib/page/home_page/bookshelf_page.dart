@@ -63,6 +63,7 @@ class BookshelfPageState extends ConsumerState<BookshelfPage> {
       fileList = files.map((file) => File(file.path!)).toList();
     }
 
+    // ignore: use_build_context_synchronously
     importBookList(fileList, context, ref);
   }
 
@@ -161,6 +162,7 @@ class BookshelfPageState extends ConsumerState<BookshelfPage> {
           await File(file.path).copy(tempFilePath);
           files.add(File(tempFilePath));
         }
+        // ignore: use_build_context_synchronously
         importBookList(files, context, ref);
         setState(() {
           _dragging = false;

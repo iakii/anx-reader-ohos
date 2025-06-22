@@ -262,7 +262,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         Colors.red,
       ]..reversed.toList();
 
-      final currentThemeColor = Prefs().themeColor;
+      // final currentThemeColor = Prefs().themeColor;
 
       return Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -298,13 +298,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             itemCount: themeColors.length,
             itemBuilder: (context, index) {
               final color = themeColors[index];
-              final isSelected =
-                  color.toARGB32() == currentThemeColor.toARGB32();
+              // final isSelected =
+              // color.toARGB32() == currentThemeColor.toARGB32();
 
               return GestureDetector(
                 onTap: () {
                   setState(() {
-                    Prefs().saveThemeToPrefs(color.toARGB32());
+                    // Prefs().saveThemeToPrefs(color.toARGB32());
                   });
                 },
                 child: Container(
@@ -312,9 +312,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     color: color,
                     shape: BoxShape.circle,
                     border: Border.all(
-                      color: isSelected
-                          ? Theme.of(context).colorScheme.onSurface
-                          : Colors.transparent,
+                      // color: isSelected
+                      //     ? Theme.of(context).colorScheme.onSurface
+                      //     : Colors.transparent,
                       width: 2,
                     ),
                     boxShadow: [
@@ -323,23 +323,23 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         blurRadius: 2,
                         offset: const Offset(0, 1),
                       ),
-                      if (isSelected)
-                        BoxShadow(
-                          color: color.withAlpha(100),
-                          blurRadius: 8,
-                          spreadRadius: 1,
-                        ),
+                      // if (isSelected)
+                      //   BoxShadow(
+                      //     color: color.withAlpha(100),
+                      //     blurRadius: 8,
+                      //     spreadRadius: 1,
+                      //   ),
                     ],
                   ),
-                  child: isSelected
-                      ? Icon(
-                          Icons.check,
-                          color: color.computeLuminance() > 0.5
-                              ? Colors.black
-                              : Colors.white,
-                          size: 20,
-                        )
-                      : null,
+                  // child: isSelected
+                  //     ? Icon(
+                  //         Icons.check,
+                  //         color: color.computeLuminance() > 0.5
+                  //             ? Colors.black
+                  //             : Colors.white,
+                  //         size: 20,
+                  //       )
+                  //     : null,
                 ),
               );
             },
@@ -394,13 +394,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                 ],
               ),
-
               const SizedBox(height: 24),
-
               buildLanguageSelector(),
-
               const SizedBox(height: 12),
-
               Row(
                 children: [
                   Icon(
@@ -447,13 +443,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ),
                 ],
               ),
-
               const SizedBox(height: 24),
-
               buildThemeColorSelector(),
-
               const SizedBox(height: 24),
-
               Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
@@ -489,7 +481,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   ],
                 ),
               ),
-
               const SizedBox(height: 16),
             ],
           ),
@@ -536,10 +527,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   tipText,
                   style: TextStyle(
                     fontSize: 13,
-                    color: Theme.of(context)
-                        .colorScheme
-                        .onSurface
-                        .withAlpha(150),
+                    color:
+                        Theme.of(context).colorScheme.onSurface.withAlpha(150),
                   ),
                 ),
               ),

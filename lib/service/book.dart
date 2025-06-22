@@ -5,16 +5,15 @@ import 'package:anx_reader/dao/theme.dart';
 import 'package:anx_reader/l10n/generated/L10n.dart';
 import 'package:anx_reader/main.dart';
 import 'package:anx_reader/models/book.dart';
-import 'package:anx_reader/page/home_page.dart';
 import 'package:anx_reader/page/iap_page.dart';
+import 'package:anx_reader/page/reading_page.dart';
 import 'package:anx_reader/providers/ai_chat.dart';
-import 'package:anx_reader/providers/sync.dart';
 import 'package:anx_reader/providers/book_list.dart';
+import 'package:anx_reader/providers/sync.dart';
 import 'package:anx_reader/service/convert_to_epub/txt/convert_from_txt.dart';
 import 'package:anx_reader/service/iap_service.dart';
 import 'package:anx_reader/utils/env_var.dart';
 import 'package:anx_reader/utils/get_path/get_base_path.dart';
-import 'package:anx_reader/page/reading_page.dart';
 import 'package:anx_reader/utils/import_book.dart';
 import 'package:anx_reader/utils/log/common.dart';
 import 'package:anx_reader/utils/toast/common.dart';
@@ -268,7 +267,7 @@ Future<void> getBookMetadata(
   AnxLog.info("import start: book url: $bookUrl");
 
   HeadlessInAppWebView webview = HeadlessInAppWebView(
-    webViewEnvironment: webViewEnvironment,
+    // webViewEnvironment: webViewEnvironment,
     initialUrlRequest: URLRequest(
         url: WebUri(generateUrl(
       bookUrl,

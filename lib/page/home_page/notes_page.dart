@@ -30,6 +30,7 @@ class _NotesPageState extends State<NotesPage> {
 
     if (bookIdAndNotes.isNotEmpty) {
       Book book = await selectBookById(bookIdAndNotes[0]['bookId']!);
+      // ignore: use_build_context_synchronously
       Provider.of<NotesDetailModel>(context, listen: false)
           .updateCurrentBook(book, bookIdAndNotes[0]['numberOfNotes']!);
     }

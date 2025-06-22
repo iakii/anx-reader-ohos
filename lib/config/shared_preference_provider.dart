@@ -46,6 +46,7 @@ class Prefs extends ChangeNotifier {
   }
 
   Color get themeColor {
+    // ignore: deprecated_member_use
     int colorValue = prefs.getInt('themeColor') ?? Colors.blue.value;
     return Color(colorValue);
   }

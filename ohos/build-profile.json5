@@ -1,0 +1,77 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "C:\\Users\\Kai\\.ohos\\config\\default_ohos_rJWkqF1MWNjaQQ2hyyx5Igw-iVFTupp1NdEN3BrvWRk=.cer",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BA80C43AD1D472FB1BA73CAC697443C7ACAED032F1642520004F764000A5B8B6290BA2B267CF291",
+          "profile": "C:\\Users\\Kai\\.ohos\\config\\default_ohos_rJWkqF1MWNjaQQ2hyyx5Igw-iVFTupp1NdEN3BrvWRk=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:\\Users\\Kai\\.ohos\\config\\default_ohos_rJWkqF1MWNjaQQ2hyyx5Igw-iVFTupp1NdEN3BrvWRk=.p12",
+          "storePassword": "0000001BAD773F89B594A81956BC20FC871679AB463D20D0D9A2B3259B46105E04852FC7BF7FD6D683BAEF"
+        }
+      }
+    ],
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "compatibleSdkVersion": "5.0.0(12)",
+        "runtimeOS": "HarmonyOS"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "flutter_inappwebview_ohos",
+      "srcPath": "../../../../../AppData/Local/Pub/Cache/git/flutter_inappwebview-bfc8e52cc9ba6e4f361bad95f7a6ee92a56ec6f6/flutter_inappwebview_ohos/ohos",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "device_info_plus",
+      "srcPath": "../../../../../AppData/Local/Pub/Cache/git/flutter_plus_plugins-9b122f3a785ec9f99af07c51b6a8ddb66a3649a1/packages/device_info_plus/device_info_plus/ohos",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "saver_gallery",
+      "srcPath": "../../../../../AppData/Local/Pub/Cache/hosted/pub.flutter-io.cn/saver_gallery-4.0.1/ohos",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}

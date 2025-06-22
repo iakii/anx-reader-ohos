@@ -245,7 +245,7 @@ class StyleWidgetState extends State<StyleWidget> {
         ),
         Expanded(
           child: Slider(
-              padding: EdgeInsets.symmetric(horizontal: 8),
+              // padding: EdgeInsets.symmetric(horizontal: 8),
               value: bookStyle.lineHeight,
               onChanged: (double value) {
                 setState(() {
@@ -265,7 +265,7 @@ class StyleWidgetState extends State<StyleWidget> {
         ),
         Expanded(
           child: Slider(
-            padding: EdgeInsets.symmetric(horizontal: 8),
+            // padding: EdgeInsets.symmetric(horizontal: 8),
             value: bookStyle.paragraphSpacing,
             onChanged: (double value) {
               setState(() {
@@ -517,6 +517,7 @@ class _ThemeChangeWidgetState extends State<ThemeChangeWidget> {
             TextButton(
               child: const Text('OK'),
               onPressed: () {
+                // ignore: deprecated_member_use
                 Navigator.of(context).pop(pickedColor.value.toRadixString(16));
               },
             ),
@@ -525,6 +526,7 @@ class _ThemeChangeWidgetState extends State<ThemeChangeWidget> {
       },
     );
 
+    // ignore: deprecated_member_use
     return pickedColor.value.toRadixString(16);
   }
 }

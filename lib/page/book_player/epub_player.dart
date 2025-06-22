@@ -7,6 +7,7 @@ import 'package:anx_reader/dao/book_note.dart';
 import 'package:anx_reader/enums/reading_info.dart';
 import 'package:anx_reader/main.dart';
 import 'package:anx_reader/models/book.dart';
+import 'package:anx_reader/models/book_note.dart';
 import 'package:anx_reader/models/book_style.dart';
 import 'package:anx_reader/models/bookmark.dart';
 import 'package:anx_reader/models/font_model.dart';
@@ -15,7 +16,6 @@ import 'package:anx_reader/models/reading_rules.dart';
 import 'package:anx_reader/models/search_result_model.dart';
 import 'package:anx_reader/models/toc_item.dart';
 import 'package:anx_reader/page/book_player/image_viewer.dart';
-import 'package:anx_reader/page/home_page.dart';
 import 'package:anx_reader/page/reading_page.dart';
 import 'package:anx_reader/providers/book_list.dart';
 import 'package:anx_reader/providers/book_toc.dart';
@@ -23,7 +23,6 @@ import 'package:anx_reader/providers/bookmark.dart';
 import 'package:anx_reader/service/book_player/book_player_server.dart';
 import 'package:anx_reader/utils/coordinates_to_part.dart';
 import 'package:anx_reader/utils/js/convert_dart_color_to_js.dart';
-import 'package:anx_reader/models/book_note.dart';
 import 'package:anx_reader/utils/webView/gererate_url.dart';
 import 'package:anx_reader/utils/webView/webview_console_message.dart';
 import 'package:anx_reader/widgets/bookshelf/book_cover.dart';
@@ -122,7 +121,7 @@ class EpubPlayerState extends ConsumerState<EpubPlayer>
 
   Future<void> goToPercentage(double value) async {
     await webViewController.evaluateJavascript(source: '''
-      goToPercent($value); 
+      goToPercent($value);
       ''');
   }
 
@@ -282,7 +281,7 @@ class EpubPlayerState extends ConsumerState<EpubPlayer>
     webViewController.evaluateJavascript(source: "forward()");
   }
 
-  void refreshToc(){
+  void refreshToc() {
     webViewController.evaluateJavascript(source: "refreshToc()");
   }
 
@@ -295,7 +294,6 @@ class EpubPlayerState extends ConsumerState<EpubPlayer>
       await webViewController.evaluateJavascript(
         source: "previousContent($count)",
       );
-
 
   void onClick(Map<String, dynamic> location) {
     readingPageKey.currentState?.resetAwakeTimer();
@@ -778,7 +776,7 @@ class EpubPlayerState extends ConsumerState<EpubPlayer>
             children: [
               SizedBox.expand(
                 child: InAppWebView(
-                  webViewEnvironment: webViewEnvironment,
+                  // webViewEnvironment: webViewEnvironment,
                   initialUrlRequest: URLRequest(
                     url: WebUri(
                       generateUrl(

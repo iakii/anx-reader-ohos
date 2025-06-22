@@ -50,8 +50,9 @@ class ReaderNoteMenuState extends State<ReaderNoteMenu> {
       }
     } finally {
       isLoading = false;
-      if (!mounted) return;
-      setState(() {});
+      if (mounted) {
+        setState(() {});
+      }
     }
   }
 

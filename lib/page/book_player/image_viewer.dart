@@ -66,8 +66,7 @@ class ImageViewer extends StatelessWidget {
                     children: [
                       IconButton(
                         onPressed: () {
-                          SaveImg.downloadImg(
-                              imageBytes!, imgType!, bookName);
+                          SaveImg.downloadImg(imageBytes!, imgType!, bookName);
                         },
                         icon: const Icon(Icons.download, color: Colors.white),
                       ),
@@ -79,6 +78,7 @@ class ImageViewer extends StatelessWidget {
                             "AnxReader_$bookName",
                           );
 
+                          // ignore: deprecated_member_use
                           Share.shareXFiles([XFile(path)]);
                         },
                         icon: const Icon(Icons.share, color: Colors.white),
