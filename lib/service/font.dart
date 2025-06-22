@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:anx_reader/utils/get_path/get_base_path.dart';
-import 'package:file_picker/file_picker.dart';
+import 'package:file_picker_ohos/file_picker_ohos.dart';
 
 Future<void> importFont() async {
   FilePickerResult? result = await FilePicker.platform.pickFiles(
@@ -19,7 +19,5 @@ Future<void> importFont() async {
     final fontDir = getFontDir();
     File newFile = File(file.path!);
     newFile.copy('${fontDir.path}/${file.name}');
-
-
   }
 }

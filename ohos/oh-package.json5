@@ -25,6 +25,7 @@
     "sqflite": "file:./har/sqflite.har",
     "audio_session": "file:./har/audio_session.har",
     "audio_service_ohos": "file:./har/audio_service_ohos.har",
-    "sqlite3_flutter_libs": "file:./har/sqlite3_flutter_libs.har"
+    "sqlite3_flutter_libs": "file:./har/sqlite3_flutter_libs.har",
+    "file_picker_ohos": "file:./har/file_picker_ohos.har"
   }
 }

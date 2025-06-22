@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:anx_reader/utils/get_path/get_download_path.dart';
-import 'package:file_picker/file_picker.dart';
+import 'package:file_picker_ohos/file_picker_ohos.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_file_dialog/flutter_file_dialog.dart';
 

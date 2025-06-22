@@ -127,13 +127,13 @@ void importBookList(List<File> fileList, BuildContext context, WidgetRef ref) {
                         setState(() {
                           currentHandlingFile = file.path;
                         });
-                        // try {
-                        await importBook(file, ref);
-                        // } catch (e) {
-                        //   setState(() {
-                        //     errorFiles.add(file.path);
-                        //   });
-                        // }
+                        try {
+                          await importBook(file, ref);
+                        } catch (e) {
+                          setState(() {
+                            errorFiles.add(file.path);
+                          });
+                        }
                       }
                       Navigator.of(navigatorKey.currentContext!).pop('dialog');
                     },

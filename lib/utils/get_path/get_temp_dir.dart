@@ -9,6 +9,7 @@ Future<Directory> getAnxTempDir() async {
     case TargetPlatform.windows:
     case TargetPlatform.macOS:
     case TargetPlatform.iOS:
+    case TargetPlatform.ohos:
       return await getTemporaryDirectory();
     default:
       throw Exception('Unsupported platform');

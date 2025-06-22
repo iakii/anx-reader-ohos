@@ -21,7 +21,7 @@ import 'package:anx_reader/utils/webdav/test_webdav.dart';
 import 'package:anx_reader/widgets/settings/settings_title.dart';
 import 'package:anx_reader/widgets/settings/webdav_switch.dart';
 import 'package:archive/archive_io.dart';
-import 'package:file_picker/file_picker.dart';
+import 'package:file_picker_ohos/file_picker_ohos.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
