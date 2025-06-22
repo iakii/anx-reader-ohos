@@ -13,6 +13,7 @@ part 'sync_status.g.dart';
 
 @Riverpod(keepAlive: true)
 class SyncStatus extends _$SyncStatus {
+  // ignore: avoid_public_notifier_properties
   List<Book> allBooksInBookShelf = [];
   @override
   Future<SyncStatusModel> build() async {

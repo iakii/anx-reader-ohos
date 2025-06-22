@@ -66,10 +66,11 @@ abstract class FontDownloadState with _$FontDownloadState {
 
 @Riverpod(keepAlive: true)
 class Fonts extends _$Fonts {
+  // ignore: avoid_public_notifier_properties
   final Dio dio = Dio();
 
   @override
-   Future<List<RemoteFontModel>> build() async {
+  Future<List<RemoteFontModel>> build() async {
     final response = await http.get(Uri.parse(fontManifestUrl));
     if (response.statusCode == 200) {
       final List<dynamic> jsonList = jsonDecode(response.body);
