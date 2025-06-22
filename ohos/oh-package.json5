@@ -21,6 +21,10 @@
     "device_info_plus": "file:./har/device_info_plus.har",
     "share_plus": "file:./har/share_plus.har",
     "saver_gallery": "file:./har/saver_gallery.har",
-    "@ohos/flutter_module": "file:./entry"
+    "@ohos/flutter_module": "file:./entry",
+    "sqflite": "file:./har/sqflite.har",
+    "audio_session": "file:./har/audio_session.har",
+    "audio_service_ohos": "file:./har/audio_service_ohos.har",
+    "sqlite3_flutter_libs": "file:./har/sqlite3_flutter_libs.har"
   }
 }

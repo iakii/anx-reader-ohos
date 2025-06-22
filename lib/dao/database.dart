@@ -130,6 +130,7 @@ class DBHelper {
         );
       case TargetPlatform.iOS:
       case TargetPlatform.linux:
+      case TargetPlatform.ohos:
       case TargetPlatform.windows:
         sqfliteFfiInit();
         var databaseFactory = databaseFactoryFfi;
@@ -258,8 +259,8 @@ class DBHelper {
 
         // Get all unique group_ids from books
         final List<Map<String, dynamic>> uniqueGroups = await db.rawQuery('''
-          SELECT DISTINCT group_id 
-          FROM tb_books 
+          SELECT DISTINCT group_id
+          FROM tb_books
           WHERE group_id IS NOT NULL AND group_id != 0
         ''');
 
@@ -272,7 +273,7 @@ class DBHelper {
           ''', [groupId]);
         }
     }
-    
+
     if (oldVersion != 0 && Prefs().webdavStatus) {
       updatedDB = true;
     }

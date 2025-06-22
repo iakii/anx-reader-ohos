@@ -21,7 +21,7 @@ import path_provider_foundation
 import screen_retriever_macos
 import share_plus
 import shared_preferences_foundation
-import sqflite_darwin
+import sqflite
 import sqlite3_flutter_libs
 import url_launcher_macos
 import wakelock_plus

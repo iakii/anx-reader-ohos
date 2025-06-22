@@ -60,11 +60,21 @@ packages:
   audio_service:
     dependency: "direct main"
     description:
-      name: audio_service
-      sha256: cb122c7c2639d2a992421ef96b67948ad88c5221da3365ccef1031393a76e044
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "0.18.18"
+      path: audio_service
+      ref: master
+      resolved-ref: "43be9f21aa33cde5a7855691a00ce52aa06014a7"
+      url: "https://gitcode.com/openharmony-sig/fluttertpc_audio_service.git"
+    source: git
+    version: "0.18.13"
+  audio_service_ohos:
+    dependency: transitive
+    description:
+      path: audio_service_ohos
+      ref: HEAD
+      resolved-ref: "43be9f21aa33cde5a7855691a00ce52aa06014a7"
+      url: "https://gitcode.com/openharmony-sig/fluttertpc_audio_service.git"
+    source: git
+    version: "0.18.15"
   audio_service_platform_interface:
     dependency: transitive
     description:
@@ -84,11 +94,12 @@ packages:
   audio_session:
     dependency: "direct main"
     description:
-      name: audio_session
-      sha256: "8f96a7fecbb718cb093070f868b4cdcb8a9b1053dce342ff8ab2fde10eb9afb7"
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "0.2.2"
+      path: "."
+      ref: "br_v0.1.21_ohos"
+      resolved-ref: "868d3bcb6a8ca3728c753e59a2e3d49dfed64935"
+      url: "https://gitcode.com/openharmony-sig/flutter_audio_session.git"
+    source: git
+    version: "0.1.21"
   audioplayers:
     dependency: "direct main"
     description:
@@ -599,15 +610,17 @@ packages:
     dependency: "direct overridden"
     description:
       path: "third_library/flex_color_picker"
-      relative: true
-    source: path
+      ref: develop
+      resolved-ref: "5b58f0be6136afa2d5181183f6ddda18d70f3463"
+      url: "https://github.com/iakii/anx-reader-ohos"
+    source: git
     version: "3.7.1"
   flex_color_scheme:
     dependency: "direct main"
     description:
       path: "third_library/flex_color_scheme"
       ref: develop
-      resolved-ref: e6bdde0cf503910fef08890e7e9613eaa446d861
+      resolved-ref: "5b58f0be6136afa2d5181183f6ddda18d70f3463"
       url: "https://github.com/iakii/anx-reader-ohos"
     source: git
     version: "8.0.0"
@@ -1205,7 +1218,7 @@ packages:
     description:
       path: "third_library/mongol"
       ref: develop
-      resolved-ref: e6bdde0cf503910fef08890e7e9613eaa446d861
+      resolved-ref: "5b58f0be6136afa2d5181183f6ddda18d70f3463"
       url: "https://github.com/iakii/anx-reader-ohos"
     source: git
     version: "9.0.0"
@@ -1540,7 +1553,7 @@ packages:
     source: hosted
     version: "2.6.5"
   rxdart:
-    dependency: transitive
+    dependency: "direct overridden"
     description:
       name: rxdart
       sha256: "5c3004a4a8dbb94bd4bf5412a4def4acdaa12e12f269737a5751369e12d1a962"
@@ -1735,51 +1748,30 @@ packages:
   sqflite:
     dependency: "direct main"
     description:
-      name: sqflite
-      sha256: "2d7299468485dca85efeeadf5d38986909c5eb0cd71fd3db2c2f000e6c9454bb"
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "2.4.1"
-  sqflite_android:
-    dependency: transitive
-    description:
-      name: sqflite_android
-      sha256: "78f489aab276260cdd26676d2169446c7ecd3484bbd5fead4ca14f3ed4dd9ee3"
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "2.4.0"
+      path: sqflite
+      ref: "br_v2.3.3+1_ohos"
+      resolved-ref: c36e531ddafbdec9a0bc7242e2ba537b122798e1
+      url: "https://gitcode.com/openharmony-sig/flutter_sqflite.git"
+    source: git
+    version: "2.3.3+1"
   sqflite_common:
-    dependency: transitive
+    dependency: "direct main"
     description:
-      name: sqflite_common
-      sha256: "761b9740ecbd4d3e66b8916d784e581861fd3c3553eda85e167bc49fdb68f709"
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "2.5.4+6"
+      path: sqflite_common
+      ref: "br_v2.3.3+1_ohos"
+      resolved-ref: c36e531ddafbdec9a0bc7242e2ba537b122798e1
+      url: "https://gitcode.com/openharmony-sig/flutter_sqflite.git"
+    source: git
+    version: "2.5.4"
   sqflite_common_ffi:
     dependency: "direct main"
     description:
-      name: sqflite_common_ffi
-      sha256: "883dd810b2b49e6e8c3b980df1829ef550a94e3f87deab5d864917d27ca6bf36"
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "2.3.4+4"
-  sqflite_darwin:
-    dependency: transitive
-    description:
-      name: sqflite_darwin
-      sha256: "22adfd9a2c7d634041e96d6241e6e1c8138ca6817018afc5d443fef91dcefa9c"
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "2.4.1+1"
-  sqflite_platform_interface:
-    dependency: transitive
-    description:
-      name: sqflite_platform_interface
-      sha256: "8dd4515c7bdcae0a785b0062859336de775e8c65db81ae33dd5445f35be61920"
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "2.4.0"
+      path: sqflite_common_ffi
+      ref: "br_v2.3.3+1_ohos"
+      resolved-ref: c36e531ddafbdec9a0bc7242e2ba537b122798e1
+      url: "https://gitcode.com/openharmony-sig/flutter_sqflite.git"
+    source: git
+    version: "2.3.3"
   sqlite3:
     dependency: transitive
     description:
@@ -1791,11 +1783,12 @@ packages:
   sqlite3_flutter_libs:
     dependency: "direct main"
     description:
-      name: sqlite3_flutter_libs
-      sha256: e07232b998755fe795655c56d1f5426e0190c9c435e1752d39e7b1cd33699c71
-      url: "https://pub.flutter-io.cn"
-    source: hosted
-    version: "0.5.34"
+      path: sqlite3_flutter_libs
+      ref: main
+      resolved-ref: f4456f532ab2058342d0d153052327e867803a44
+      url: "https://github.com/SageMik/sqlite3-ohos.dart"
+    source: git
+    version: "0.5.25"
   stack_trace:
     dependency: transitive
     description:
@@ -1909,7 +1902,7 @@ packages:
     source: hosted
     version: "0.7.0"
   url_launcher:
-    dependency: "direct overridden"
+    dependency: "direct main"
     description:
       path: "packages/url_launcher/url_launcher"
       ref: HEAD

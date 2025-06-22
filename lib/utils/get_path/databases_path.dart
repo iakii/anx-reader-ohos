@@ -11,6 +11,7 @@ Future<String> getAnxDataBasesPath() async {
       final path = await getDatabasesPath();
       return path;
     case TargetPlatform.linux:
+    case TargetPlatform.ohos:
     case TargetPlatform.windows:
     case TargetPlatform.macOS:
     case TargetPlatform.iOS:
