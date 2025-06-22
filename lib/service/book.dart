@@ -305,6 +305,7 @@ Future<void> getBookMetadata(
       }
       webviewConsoleMessage(controller, consoleMessage);
     },
+    // webViewEnvironment: webViewEnvironment,
   );
 
   await webview.dispose();
